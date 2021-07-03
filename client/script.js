@@ -19,7 +19,7 @@ $(document).ready(function(){
                 $('#fill1').text('');
                 $('#fill2').text('');
                 $('#fill3').text('');
-                $.post('http://127.0.0.1:5000/predict',{
+                $.post('/predict',{
                     name:name,
                     transmission: transmission,
                     fuel: fuel,
@@ -55,7 +55,7 @@ $(document).ready(function(){
     });
 });
 function onPageLoad() {
-    var url = "http://127.0.0.1:5000/get_car_name"; 
+    var url = "/get_car_name"; 
     $.get(url,function(data, status) {
         if(data) {
             var car_name = data.car_name;
